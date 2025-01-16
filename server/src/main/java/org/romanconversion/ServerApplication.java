@@ -1,13 +1,13 @@
-package org.adobemarketing.adobeperformance;
+package org.romanconversion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AdobeperformanceApplication {
+public class ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AdobeperformanceApplication.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 
 }

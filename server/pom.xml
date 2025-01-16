@@ -8,11 +8,11 @@
         <version>3.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.adobeassignment</groupId>
-    <artifactId>RomanConversion</artifactId>
+    <groupId>org.adobemarketing</groupId>
+    <artifactId>server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>romanconversion</name>
-    <description>A web application to do integer to roman conversion</description>
+    <name>server</name>
+    <description>server</description>
     <url/>
     <licenses>
         <license/>
