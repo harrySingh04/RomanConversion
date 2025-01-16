@@ -1,6 +1,9 @@
 package org.romanconversion.controller;
 
+import org.romanconversion.dto.ResponseDto;
 import org.romanconversion.server.RomanService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * This controller handles HTTP requests to convert an integer to its Roman numeral representation.
  */
 @RestController
-@RequestMapping("/romannumeral") // Base URL for the API
+@RequestMapping(value = "/romannumeral",produces = MediaType.APPLICATION_JSON_VALUE) // Base URL for the API
 public class RomanConversion {
 
     // RomanService is used to perform the conversion logic.
@@ -40,15 +43,16 @@ public class RomanConversion {
      * @return the Roman numeral representation of the number
      */
     @GetMapping("")// Maps to HTTP GET requests at /romannumeral
-    public ResponseEntity<String> getRomanNumeral(@RequestParam(name="query") Integer number){
+    public ResponseEntity<ResponseDto> getRomanNumeral(@RequestParam(name="query") Integer number){
 
         try {
             // Call the RomanService to convert the number
+            System.out.println(number);
             String romanNumeral = romanService.getRomanFromInteger(number);
-            return ResponseEntity.ok(romanNumeral); // Return 200 OK with the result
+        return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(romanNumeral)); // Return 200 OK with the result
         } catch (IllegalArgumentException e) {
             // Return 400 Bad Request with the error message
-            return ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.badRequest().body(new ResponseDto(e.getMessage()));
         }
 
     }
