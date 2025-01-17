@@ -40,8 +40,8 @@ romanconversion/
    Ensure the following tools are installed on your system:
 
 ```
-    Docker: Install Docker 
-    Docker Compose: Install Docker Compose
+Docker: Install Docker 
+Docker Compose: Install Docker Compose
  ```
 
 #### 2. Build and Run the Application
