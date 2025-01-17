@@ -1,6 +1,9 @@
 package org.romanconversion.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 
 /**
  * Service to convert an integer to its Roman numeral representation.
@@ -15,6 +18,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class RomanService {
+
+    private static final Logger logger = LoggerFactory.getLogger(RomanService.class);
 
     // Array of Roman numeral symbols in descending order of their values
     private static final String[] ROMAN_VALUES = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
@@ -37,11 +42,15 @@ public class RomanService {
      */
     public String getRomanFromInteger(Integer number){
 
+        logger.info("Received request to convert number: {}", number);
+
         // Validate input to ensure it is within the acceptable range
         if (number == null) {
+            logger.error("Number is null , hence cannot convert to Roman");
             throw new IllegalArgumentException("Input number cannot be null.");
         }
         if (number <= 0 || number > 3999) {
+            logger.error("Invalid input: {}", number);
             throw new IllegalArgumentException("Input number must be between 1 and 3999.");
         }
 
@@ -56,8 +65,12 @@ public class RomanService {
                 number = number - INTEGER_VALUES[i];
                 // Append the corresponding Roman numeral symbol
                 romanNumeralBuilder.append(ROMAN_VALUES[i]);
+
+                logger.debug("Appended symbol: {} | Remaining number: {}", ROMAN_VALUES[i], number);
             }
         }
+
+        logger.info("Converted Roman numeral: {}", romanNumeralBuilder);
 
         // Return the resulting Roman numeral string
         return romanNumeralBuilder.toString();
