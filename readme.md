@@ -39,8 +39,10 @@ romanconversion/
 #### 1. Prerequisites
    Ensure the following tools are installed on your system:
 
-    * Docker: Install Docker 
-    * Docker Compose: Install Docker Compose
+```
+    Docker: Install Docker 
+    Docker Compose: Install Docker Compose
+ ```
 
 #### 2. Build and Run the Application
    To start the backend (Spring Boot) and frontend (React) services together, run the following command from the project root directory (romanconversion/):
