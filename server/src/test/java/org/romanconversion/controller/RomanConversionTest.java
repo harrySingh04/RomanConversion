@@ -29,7 +29,7 @@ public class RomanConversionTest {
         // Perform the GET request and validate the response
         mockMvc.perform(get("/romannumeral?query=1994"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("MCMXCIV"));
+                .andExpect(content().json("{\"value\": \"MCMXCIV\"}"));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class RomanConversionTest {
         // Perform the GET request and validate the response
         mockMvc.perform(get("/romannumeral?query=0"))
                 .andExpect(status().isBadRequest())
-                .andExpect(content().string("Input number must be between 1 and 3999."));
+                .andExpect(content().json("{\"value\": \"Input number must be between 1 and 3999.\" }"));
     }
 }
 

@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: server  # Application name
+
+client:
+  url: http://localhost:3000  # Frontend URL
+
+logging:
+  level:
+    root: INFO  # Default log level
+    org.romanconversion: DEBUG  # Debug logs for specific package
+    org.springframework.web: ERROR  # Error logs for Spring Web
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"  # Console log format
+  file:
+    name: logs/romanconversion.log  # Log file path
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info , metrics # Exposing health and info
+      base-path: /actuator # Actuator path for metrics
+
+# Used to describe the endpoint /actuator/info to give info about the API
+info:
+  app:
+    name: Roman Conversion API
+    description: Converts integers to Roman numerals
+    version: 1.0.0

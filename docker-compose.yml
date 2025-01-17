@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # expose local port
+    volumes:
+      - ./client/:/usr/src/app # mount local working directory for live reload
+      - /usr/src/app/node_modules # mount node_modules for caching
+
+  server:
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+      cache_from:
+        - server-cache:latest # Use build cache for Maven dependencies
+    ports:
+      - "8080:8080" # expose local port for spring boot web application
+
+
+
+
