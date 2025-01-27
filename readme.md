@@ -77,6 +77,11 @@ This will:
 2. Validates input to ensure numbers are between 1 and 3999.
 
 3. Dockerized using a multi-stage build for production-ready images.
+4. If needed to standalone start just the server , maven command can be
+ used by first going to the server module and then using terminal 
+ or command line run the following command :
+   
+    `mvn spring-boot:run` 
 
 #### API Endpoint
 
@@ -89,9 +94,10 @@ This will:
     ```
 * Response:
     ```
-    {
-    "value": "MCMXCIV"
-    }
+   {
+  "input":"123",
+  "output":"CXXIII"
+  }
     ```
   
 ### Frontend (React)
@@ -104,6 +110,9 @@ This will:
 3. Hot reloading for development.
 
 4. Used Material UI instead of Adobe React Spectrum.
+5. To run the front end separately we can first go to client module and then 
+run the following command :`npm run start` .  
+
 
 #### Why Material UI
 
@@ -121,7 +130,14 @@ Material UI is an excellent fit for React-based projects because of its:
 
 #### Front End Testing
 
+We have implemented unit and integration tests for the React frontend using Jest and React Testing Library
+to ensure the correctness of the UI components and API interactions. The tests cover key functionalities
+such as rendering the input field, handling user interactions, API calls, and dark mode toggling.
+Additionally, we verify accessibility features, error handling, and 
+UI updates to provide a seamless user experience.
 
+To run the test without watch mode we can use the following command by going
+to the client module: `npm test -- --watchAll=false`
 
 ### Features Added
 
@@ -135,6 +151,10 @@ These endpoints provide critical insights into the application's status and perf
 * Metrics: Access detailed metrics about JVM performance, memory usage, thread pools, and API request counts.
 
 #### Actuator Endpoints
+
+The below endpoints will be up when the server is running which can be either 
+through docker-compose up --build command or going to server module and using maven command line
+to start the server (mvn spring-boot:run)
 
 * **http://localhost:8080/actuator** : Shows a list of all available Actuator endpoints.
 * **http://localhost:8080/actuator/health** : Displays the application's health status (e.g., UP or DOWN) and component-specific health checks.
