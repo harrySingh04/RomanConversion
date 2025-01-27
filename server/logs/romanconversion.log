@@ -1,0 +1,61 @@
+2025-01-25T12:56:35.686-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 63852 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T12:56:35.686-08:00 DEBUG 63852 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T12:56:35.687-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T12:56:36.377-08:00  INFO 63852 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T12:56:36.377-08:00  INFO 63852 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T12:56:36.378-08:00  INFO 63852 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-25T12:56:36.391-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 0.91 seconds (process running for 1.384)
+2025-01-25T12:56:36.431-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 0
+2025-01-25T12:56:36.433-08:00 ERROR 63852 --- [server] [main] o.r.controller.RomanConversion           : Error processing request: Input number must be between 1 and 3999.
+2025-01-25T12:56:36.472-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 1994
+2025-01-25T12:56:36.472-08:00  INFO 63852 --- [server] [main] o.r.controller.RomanConversion           : Successfully converted number: 1994 to Roman numeral: MCMXCIV
+2025-01-25T12:58:28.548-08:00  INFO 63897 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 63897 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T12:58:28.549-08:00 DEBUG 63897 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T12:58:28.549-08:00  INFO 63897 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T12:58:29.294-08:00  INFO 63897 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T12:58:29.295-08:00  INFO 63897 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T12:58:29.295-08:00  INFO 63897 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-25T12:58:29.311-08:00  INFO 63897 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 0.92 seconds (process running for 1.306)
+2025-01-25T12:58:29.358-08:00  INFO 63897 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 0
+2025-01-25T12:58:29.363-08:00 ERROR 63897 --- [server] [main] o.r.controller.RomanConversion           : Error processing request: Input number must be between 1 and 3999.
+2025-01-25T12:59:12.590-08:00  INFO 63926 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 63926 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T12:59:12.590-08:00 DEBUG 63926 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T12:59:12.590-08:00  INFO 63926 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T12:59:13.328-08:00  INFO 63926 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T12:59:13.329-08:00  INFO 63926 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T12:59:13.329-08:00  INFO 63926 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-25T12:59:13.346-08:00  INFO 63926 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 0.919 seconds (process running for 1.302)
+2025-01-25T12:59:13.390-08:00  INFO 63926 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 1994
+2025-01-25T12:59:13.391-08:00  INFO 63926 --- [server] [main] o.r.controller.RomanConversion           : Successfully converted number: 1994 to Roman numeral: MCMXCIV
+2025-01-25T13:55:54.653-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 65172 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T13:55:54.654-08:00 DEBUG 65172 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T13:55:54.655-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T13:55:55.543-08:00  INFO 65172 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T13:55:55.543-08:00  INFO 65172 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T13:55:55.544-08:00  INFO 65172 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-01-25T13:55:55.567-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 1.183 seconds (process running for 1.67)
+2025-01-25T13:55:55.619-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 0
+2025-01-25T13:55:55.621-08:00 ERROR 65172 --- [server] [main] o.r.controller.RomanConversion           : Error processing request: Input number must be between 1 and 3999.
+2025-01-25T13:55:55.623-08:00 ERROR 65172 --- [server] [main] o.r.exception.GlobalExceptionHandler     : Invalid input error: Input number must be between 1 and 3999.
+2025-01-25T13:55:55.709-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 1994
+2025-01-25T13:55:55.709-08:00  INFO 65172 --- [server] [main] o.r.controller.RomanConversion           : Successfully converted number: 1994 to Roman numeral: MCMXCIV
+2025-01-25T13:57:06.332-08:00  INFO 65203 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 65203 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T13:57:06.332-08:00 DEBUG 65203 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T13:57:06.332-08:00  INFO 65203 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T13:57:07.075-08:00  INFO 65203 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T13:57:07.075-08:00  INFO 65203 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T13:57:07.075-08:00  INFO 65203 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-25T13:57:07.092-08:00  INFO 65203 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 0.919 seconds (process running for 1.287)
+2025-01-25T13:57:07.134-08:00  INFO 65203 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 0
+2025-01-25T13:57:07.136-08:00 ERROR 65203 --- [server] [main] o.r.controller.RomanConversion           : Error processing request: Input number must be between 1 and 3999.
+2025-01-25T13:57:07.137-08:00 ERROR 65203 --- [server] [main] o.r.exception.GlobalExceptionHandler     : Invalid input error: Input number must be between 1 and 3999.
+2025-01-25T14:00:00.713-08:00  INFO 65266 --- [server] [main] o.r.controller.RomanConversionTest       : Starting RomanConversionTest using Java 17.0.7 with PID 65266 (started by harmindersingh in /Users/harmindersingh/test/RomanConversion/server)
+2025-01-25T14:00:00.714-08:00 DEBUG 65266 --- [server] [main] o.r.controller.RomanConversionTest       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-25T14:00:00.714-08:00  INFO 65266 --- [server] [main] o.r.controller.RomanConversionTest       : No active profile set, falling back to 1 default profile: "default"
+2025-01-25T14:00:01.478-08:00  INFO 65266 --- [server] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-25T14:00:01.478-08:00  INFO 65266 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-25T14:00:01.479-08:00  INFO 65266 --- [server] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-01-25T14:00:01.495-08:00  INFO 65266 --- [server] [main] o.r.controller.RomanConversionTest       : Started RomanConversionTest in 0.954 seconds (process running for 1.359)
+2025-01-25T14:00:01.545-08:00  INFO 65266 --- [server] [main] o.r.controller.RomanConversion           : Received GET request for number: 0
+2025-01-25T14:00:01.547-08:00 ERROR 65266 --- [server] [main] o.r.controller.RomanConversion           : Error processing request: Input number must be between 1 and 3999.
+2025-01-25T14:00:01.548-08:00 ERROR 65266 --- [server] [main] o.r.exception.GlobalExceptionHandler     : Invalid input error: Input number must be between 1 and 3999.
