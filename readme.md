@@ -53,8 +53,8 @@ docker-compose up --build
 This will:
 
 1. Build the backend and frontend Docker images.
-2. Start the Spring Boot API on port 8080.
-3. Start the React app on port 3000.
+2. Start the **Spring Boot API** on port 8080.
+3. Start the **React front end app** on port 3000.
 4. Access the Application
    Frontend (React UI): Open your browser and navigate to:
     ```
@@ -77,11 +77,13 @@ This will:
 2. Validates input to ensure numbers are between 1 and 3999.
 
 3. Dockerized using a multi-stage build for production-ready images.
-4. If needed to standalone start just the server , maven command can be
- used by first going to the server module and then using terminal 
- or command line run the following command :
-   
-    `mvn spring-boot:run` 
+4. Can be started independently using Maven:
+
+```
+cd server
+mvn spring-boot: run
+```
+
 
 #### API Endpoint
 
@@ -110,9 +112,16 @@ This will:
 3. Hot reloading for development.
 
 4. Used Material UI instead of Adobe React Spectrum.
-5. To run the front end separately we can first go to client module and then 
-run the following command :`npm run start` .  
+5. Run front end separately:
 
+```
+cd client
+npm start
+
+```
+
+Then, open your browser at http://localhost:3000.
+Ensure the backend is running by checking http://localhost:8080/actuator/health.
 
 #### Why Material UI
 
@@ -130,14 +139,24 @@ Material UI is an excellent fit for React-based projects because of its:
 
 #### Front End Testing
 
-We have implemented unit and integration tests for the React frontend using Jest and React Testing Library
-to ensure the correctness of the UI components and API interactions. The tests cover key functionalities
-such as rendering the input field, handling user interactions, API calls, and dark mode toggling.
-Additionally, we verify accessibility features, error handling, and 
-UI updates to provide a seamless user experience.
+We have implemented unit and integration tests for the React frontend using:
 
-To run the test without watch mode we can use the following command by going
-to the client module: `npm test -- --watchAll=false`
+* Jest: For running JavaScript tests.
+* React Testing Library: For testing React components in a user-friendly way.
+
+#### Covered Test Cases:
+
+* Rendering the input field.
+* Handling user interactions (e.g., typing, button clicks).
+* API calls and validating responses.
+* Dark mode toggle functionality.
+* Accessibility checks for UI components.
+
+#### Run Tests
+
+Run the following command from the client module:
+
+`npm test -- --watchAll=false`
 
 ### Features Added
 
