@@ -33,6 +33,7 @@ function App() {
 
     try{
 
+
       // Fetch the Roman numeral from the backend API
       const response = await fetch(`http://localhost:8080/romannumeral?query=${inputValue}`)
 
@@ -41,7 +42,7 @@ function App() {
 
       // Update the Roman numeral result from the API response
       // If the API returns an invalid number, display a default message
-      setRomanNumeral(data.value || 'Invalid number')
+      setRomanNumeral(data.output || data.errorMsg || 'Invalid Number')
     }
     catch(error){
       // Handle any errors during the API call
@@ -85,20 +86,16 @@ function App() {
               maxWidth: '300px', // Set a maximum width for better design
               marginBottom: 4,
           }}>
-            {/* Label above the input text field */}
-            <Typography
-                variant={'subtitle1'}
-                sx={{ marginRight: 2 ,marginLeft: -20}}
-            >
-              Enter a number
-            </Typography>
 
             {/* TextField for user input */}
             <TextField
                 variant={'outlined'}
                 fullWidth
+                label={"Enter the number here..."}
+                type={"number"}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                autoFocus
                 sx={{ marginBottom: 2 }}
             />
 
@@ -126,19 +123,8 @@ function App() {
           <Box>
             {/* Displaying Roman numeral result on one line */}
               <Typography variant={'subtitle1'} textAlign={"left"}>
-                <span
-                    style={{
-                        fontWeight: 'bold'
-                    }}
-                >
-                    Roman Numeral:</span>
-              <span
-                  style={{
-                      marginLeft: '8px', // Add spacing between label and result
-                  }}
-              >
-              {romanNumeral}
-            </span>
+                <span style={{fontWeight: 'bold'}}>Roman Numeral:</span>
+                <span style={{marginLeft: '8px'}}>{romanNumeral}</span>
               </Typography>
           </Box>
           </Box>

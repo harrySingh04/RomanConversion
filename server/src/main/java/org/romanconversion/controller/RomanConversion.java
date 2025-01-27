@@ -1,5 +1,6 @@
 package org.romanconversion.controller;
 
+import org.romanconversion.dto.ErrorResponseDto;
 import org.romanconversion.dto.ResponseDto;
 import org.romanconversion.server.RomanService;
 import org.slf4j.Logger;
@@ -54,11 +55,11 @@ public class RomanConversion {
 
             String romanNumeral = romanService.getRomanFromInteger(number);
             logger.info("Successfully converted number: {} to Roman numeral: {}", number, romanNumeral);
-            return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(romanNumeral)); // Return 200 OK with the result
+            return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(String.valueOf(number), romanNumeral)); // Return 200 OK with the result
         } catch (IllegalArgumentException e) {
             // Return 400 Bad Request with the error message
             logger.error("Error processing request: {}", e.getMessage());
-            return ResponseEntity.badRequest().body(new ResponseDto(e.getMessage()));
+             throw new IllegalArgumentException(e.getMessage());
         }
 
     }

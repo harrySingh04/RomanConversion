@@ -1,6 +1,9 @@
 package org.romanconversion.server;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+import org.romanconversion.metrics.CustomMetrics;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -10,8 +13,20 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 class RomanServiceTest {
 
+    // Create instance for custom metrics
+    private  CustomMetrics customMetrics;
     // Create an instance of RomanService for testing
-    private final RomanService romanService = new RomanService();
+    private  RomanService romanService;
+
+    @BeforeEach
+    public void setUp(){
+        // Mock the CustomMetrics dependency
+        customMetrics = Mockito.mock(CustomMetrics.class);
+
+        // Inject the mock into RomanService
+        romanService = new RomanService(customMetrics);
+    }
+
 
     @Test
     void testValidRomanConversion() {

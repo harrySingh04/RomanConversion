@@ -1,3 +1,3 @@
 package org.romanconversion.dto;
 
-public record ResponseDto(String value){}
+public record ResponseDto(String input, String output){}

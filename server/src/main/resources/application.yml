@@ -22,6 +22,11 @@ management:
       exposure:
         include: health, info , metrics # Exposing health and info
       base-path: /actuator # Actuator path for metrics
+  health:
+    show-details: always
+  metrics:
+    enable:
+      all: true
 
 # Used to describe the endpoint /actuator/info to give info about the API
 info:

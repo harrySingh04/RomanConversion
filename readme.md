@@ -119,6 +119,9 @@ Material UI is an excellent fit for React-based projects because of its:
 
 4. Documentation and Community Support: Material UI has clear documentation and a large community, which makes it easier to troubleshoot issues and find best practices.
 
+#### Front End Testing
+
+
 
 ### Features Added
 
@@ -133,9 +136,10 @@ These endpoints provide critical insights into the application's status and perf
 
 #### Actuator Endpoints
 
-* **/actuator** : Shows a list of all available Actuator endpoints.
-* **/health** : Displays the application's health status (e.g., UP or DOWN) and component-specific health checks.
-* **/actuator/metrics** : Provides detailed application metrics (e.g., memory, CPU, JVM stats, HTTP request counts, etc.).
+* **http://localhost:8080/actuator** : Shows a list of all available Actuator endpoints.
+* **http://localhost:8080/actuator/health** : Displays the application's health status (e.g., UP or DOWN) and component-specific health checks.
+* **http://localhost:8080/actuator/metrics** : Provides detailed application metrics (e.g., memory, CPU, JVM stats, HTTP request counts, etc.).
+* **http://localhost:8080/actuator/metrics/conversion.success.count** : Custom metrics to track total number of successfully conversions.
 
 #### Centralized Logging
 
